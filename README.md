@@ -21,23 +21,29 @@ Symbolic, statically-checked shapes — Matrix<Returns, T-1, N> is checked at co
 Compiles to real C++ — DimExpr maps to Eigen's fixed-size template parameters, so shape checks disappear entirely by the time the code runs; tags cost nothing at runtime, since they're erased during codegen.
 A stdlib built for quant work — covariance, correlation, EWMA, rolling windows, Cholesky, portfolio construction, and more, each with a signature that only accepts the inputs that actually make sense.
 
-
-Rix Compiler Pipeline 
+Rix Compiler Architecture  
 
 ```mermaid
 flowchart TD
-%% Main Compiler Pipeline
-Input["Your .rix File"] --> Tokenizer
-Tokenizer["Rix Tokenizer<br/>breaks source into tokens<br/>func, let, &#123;, &#34;Prices&#34;, 252, ..."] --> Parser
-Parser["Parser<br/>builds AST tree"] --> TypeCheck
-TypeCheck["Type Checker<br/>unify + symbol tables"] --> CPPWrite
-CPPWrite["C++ Writer<br/>emits Eigen C++"] --> GenCode
-GenCode["Generated Code<br/>.cpp file"] --> Binary
-Binary["Compiled binary<br/>run via g++"]
+    A[Source file<br/>.rix program text] --> B[Tokenizer<br/>source to tokens]
+    B --> C[Parser<br/>builds AST tree]
+    C --> D[Type checker<br/>unify + symbol tables]
+    D --> E[C++ writer<br/>emits Eigen C++]
+    E --> F[Generated code<br/>.cpp file, Eigen]
+    F --> G[Compiled binary<br/>run via g++]
 
-%% Side Inputs
-CoreTypes["Core Types<br/>Dim, Tag, RixType"] -.-> TypeCheck
-StdLibrary["Standard Library<br/>signatures + runtime"] -.-> TypeCheck
+    H[Core types<br/>DimExpr, Tag, RixType] --> C
+    H --> D
+    I[Standard library<br/>signatures + runtime] --> D
+    I --> E
+
+    classDef done fill:#9FE1CB,stroke:#0F6E56,color:#04342C;
+    classDef next fill:#FAC775,stroke:#854F0B,color:#412402;
+    classDef todo fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A;
+
+    class B,H done
+    class C next
+    class A,D,E,F,G,I todo
 ```
 
 
