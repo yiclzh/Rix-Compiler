@@ -5,17 +5,8 @@
 
 Rix Compiler Pipeline 
 
-your .rix file
-      ↓
-  Tokenizer    →  breaks source into tokens (func, let, {, "Prices", 252, ...)
-      ↓
-   Parser      →  turns tokens into a tree structure (the AST)
-      ↓
- TypeChecker   →  walks the tree, makes sure cov(prices) fails, rolling<60> works, etc.
-      ↓
-  CppWriter    →  turns the checked tree into real C++ (Eigen) source code
-      ↓
-   .cpp file   →  you compile that normally with g++
+<img width="706" height="770" alt="compilerflow" src="https://github.com/user-attachments/assets/796f1d20-a5d5-41f9-a447-5a8624744ec1" />
+
 
 
 
