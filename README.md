@@ -36,14 +36,6 @@ flowchart TD
     H --> D
     I[Standard library<br/>signatures + runtime] --> D
     I --> E
-
-    classDef done fill:#9FE1CB,stroke:#0F6E56,color:#04342C;
-    classDef next fill:#FAC775,stroke:#854F0B,color:#412402;
-    classDef todo fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A;
-
-    class B,H done
-    class C next
-    class A,D,E,F,G,I todo
 ```
 
 
