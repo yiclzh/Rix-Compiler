@@ -80,19 +80,26 @@ void Tokenizer::skipWhitespaceAndComments() {
 void Tokenizer::readNumber() {
     size_t start = pos;
     bool isFloat = false;
-    while (pos < source_.size() && std::isdigit(static_cast<unsigned char>(source_[pos]))) ++pos;
-    if (pos < source_.size() && source_[pos] == '.') {
+
+    while (pos < source_.size() && std::isdigit(static_cast<unsigned char>(source_[pos])))
+        ++pos;
+
+    bool nextIsDigit = pos + 1 < source_.size() &&
+                        std::isdigit(static_cast<unsigned char>(source_[pos + 1]));
+    if (pos < source_.size() && source_[pos] == '.' && nextIsDigit) {
         isFloat = true;
         ++pos;
-        while (pos < source_.size() && std::isdigit(static_cast<unsigned char>(source_[pos]))) ++pos;
+        while (pos < source_.size() && std::isdigit(static_cast<unsigned char>(source_[pos])))
+            ++pos;
     }
-    std::string text = source_.substr(start, pos - start);
-    if (isFloat) { 
-        currentType = TokenType::FLOAT_CONST; 
-        currentFloatVal = std::stod(text); 
-    } else { 
-        currentType = TokenType::INT_CONST;   
-        currentIntVal = std::stoi(text); 
+
+    currentText = source_.substr(start, pos - start);
+    if (isFloat) {
+        currentType = TokenType::FLOAT_CONST;
+        currentFloatVal = std::stod(currentText);
+    } else {
+        currentType = TokenType::INT_CONST;
+        currentIntVal = std::stoi(currentText);
     }
 }
 
