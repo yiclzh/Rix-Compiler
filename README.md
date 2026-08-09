@@ -4,7 +4,7 @@ Rix
 
 A statically-shape-checked matrix language for quantitative finance, compiling to C++ (Eigen).
 
-What is Rix
+What is Rix?
 
 Rix catches an entire class of bug that plain C++/numpy/Eigen can't: code that's structurally valid but semantically wrong. cov(prices) — computing a covariance matrix directly on price levels instead of returns — runs fine in most languages and produces a quietly wrong number. In Rix, Prices and Returns are distinct types, even when their numeric shape is identical, so that call is a compile error.
 
@@ -24,17 +24,26 @@ A stdlib built for quant work — covariance, correlation, EWMA, rolling windows
 
 Rix Compiler Pipeline 
 
-your .rix file
-      ↓
-  Tokenizer    →  breaks source into tokens (func, let, {, "Prices", 252, ...)
-      ↓
-   Parser      →  turns tokens into a tree structure (the AST)
-      ↓
- TypeChecker   →  walks the tree, makes sure cov(prices) fails, rolling<60> works, etc.
-      ↓
-  CppWriter    →  turns the checked tree into real C++ (Eigen) source code
-      ↓
-   .cpp file   →  you compile that normally with g++
+```mermaid
+flowchart TD
+%% Main Compiler Pipeline
+Input[<br>Your .rix File] --> Tokenizer[Rix Tokenizer<br/>breaks source into tokens<br/>func, let, {, Prices, 252, ...<br/>]
+Tokenizer --> Parser[Parser<br/>builds AST tree<br/>]
+Parser --> TypeCheck[Type Checker<br/>unify + symbol tables<br/>]
+TypeCheck --> CPPWrite[C++ Writer<br/>emits Eigen C++<br/>]
+CPPWrite --> GenCode[Generated Code<br/>.cpp file<br/>]
+GenCode --> Binary[Compiled binary<br/>run via g++<br/>]
+
+%% External Inputs (Invisible Nodes for side-entry)
+ParserStart( ) -..-> Parser
+ParserStart ~~~ CoreTypes[Core Types<br/>Dim, Tag, RixType]
+CoreTypes -.-> TypeCheck
+
+StdLib( ) -..-> CPPWrite
+StdLib ~~~ StdLibrary[Standard Library<br/>signatures + runtime]
+StdLibrary -.-> TypeCheck
+```
+
 
 
 
