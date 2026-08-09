@@ -24,6 +24,7 @@ A stdlib built for quant work — covariance, correlation, EWMA, rolling windows
 Rix Compiler Architecture  
 
 ```mermaid
+%%{init: {'flowchart': {'nodeSpacing': 20, 'rankSpacing': 30}, 'themeVariables': {'fontSize': '12px'}}}%%
 flowchart TD
     A[Source file<br/>.rix program text] --> B[Tokenizer<br/>source to tokens]
     B --> C[Parser<br/>builds AST tree]
