@@ -4,6 +4,7 @@
 namespace rix {
 
     // Tag is a compile time only nominal marker (Prices, Returns, CovMatrix...)
+    // Tag is how Prices vs Returns are distinct labels
     // It erases during codegen -- no runtime representation, no cost.
 
     struct Tag

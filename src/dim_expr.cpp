@@ -2,6 +2,9 @@
 #include <sstream>
 #include <utility>
 
+
+// DimExpr is how the compiler represents a matrix dimension like T, T-1 or 192 as data it can do math on.
+
 namespace rix {
 
 // map never contains 0
