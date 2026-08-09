@@ -27,21 +27,17 @@ Rix Compiler Pipeline
 ```mermaid
 flowchart TD
 %% Main Compiler Pipeline
-Input[<br>Your .rix File] --> Tokenizer[Rix Tokenizer<br/>breaks source into tokens<br/>func, let, {, Prices, 252, ...<br/>]
-Tokenizer --> Parser[Parser<br/>builds AST tree<br/>]
-Parser --> TypeCheck[Type Checker<br/>unify + symbol tables<br/>]
-TypeCheck --> CPPWrite[C++ Writer<br/>emits Eigen C++<br/>]
-CPPWrite --> GenCode[Generated Code<br/>.cpp file<br/>]
-GenCode --> Binary[Compiled binary<br/>run via g++<br/>]
+Input["Your .rix File"] --> Tokenizer
+Tokenizer["Rix Tokenizer<br/>breaks source into tokens<br/>func, let, &#123;, &#34;Prices&#34;, 252, ..."] --> Parser
+Parser["Parser<br/>builds AST tree"] --> TypeCheck
+TypeCheck["Type Checker<br/>unify + symbol tables"] --> CPPWrite
+CPPWrite["C++ Writer<br/>emits Eigen C++"] --> GenCode
+GenCode["Generated Code<br/>.cpp file"] --> Binary
+Binary["Compiled binary<br/>run via g++"]
 
-%% External Inputs (Invisible Nodes for side-entry)
-ParserStart( ) -..-> Parser
-ParserStart ~~~ CoreTypes[Core Types<br/>Dim, Tag, RixType]
-CoreTypes -.-> TypeCheck
-
-StdLib( ) -..-> CPPWrite
-StdLib ~~~ StdLibrary[Standard Library<br/>signatures + runtime]
-StdLibrary -.-> TypeCheck
+%% Side Inputs
+CoreTypes["Core Types<br/>Dim, Tag, RixType"] -.-> TypeCheck
+StdLibrary["Standard Library<br/>signatures + runtime"] -.-> TypeCheck
 ```
 
 
