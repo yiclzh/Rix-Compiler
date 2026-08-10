@@ -1,0 +1,13 @@
+/Users/yiruclare/RixCompiler/build/CMakeFiles/rixc_lib.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/rixc.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_dim_expr.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_rix_type.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_ast.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_parser.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_unify.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_tables.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_type.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test_cpp_writer.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/test.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/edit_cache.dir
+/Users/yiruclare/RixCompiler/build/CMakeFiles/rebuild_cache.dir

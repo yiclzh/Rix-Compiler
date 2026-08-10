@@ -1,0 +1,1 @@
+/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_rix_type.dir/test/test_rix_type.cpp.o -o test_rix_type  librixc_lib.a

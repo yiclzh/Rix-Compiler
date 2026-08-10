@@ -5,10 +5,6 @@ namespace rix {
 
 namespace {
 
-// Mirrors renameType's traversal (function_table.cpp) but substitutes bound
-// values via a Subst instead of renaming -- this is how a call's return
-// type (e.g. Matrix<CovMatrix, N@3, N@3>) becomes concrete (Matrix<CovMatrix,
-// 3, 3>) once unification has bound N@3.
 RixType resolveFully(const RixType& t, const Subst& subst) {
     if (t.is<MatrixType>()) {
         const auto& m = t.as<MatrixType>();
@@ -48,11 +44,7 @@ void TypeChecker::checkProgram(const ProgramNode& program) {
 }
 
 void TypeChecker::checkStructDecl(const StructDecl& /*decl*/) {
-    // Not yet validated against a registered struct definition -- that needs
-    // a StructTable mirroring FunctionTable (field name -> type, generic Nat
-    // params). Struct *literals* are still checked field-by-field in
-    // checkStructLiteral; this is specifically about validating the
-    // declaration itself. Left as a known gap for the next pass.
+    
 }
 
 void TypeChecker::checkFuncDecl(const FuncDecl& decl) {
@@ -164,9 +156,6 @@ RixType TypeChecker::checkCall(const CallExpr& call, int line) {
     FunctionSig sig = functions_.instantiate(call.funcName, nextCallId_++);
     Subst subst;
 
-    // Const-generic args (rolling<60>'s "60") bind directly -- they aren't
-    // discovered through unification the way T/N are, since no *parameter*
-    // ever mentions n by itself.
     if (sig.constGenericParams.size() != call.templateArgs.size()) {
         throw TypeError(call.funcName + "() expects " + std::to_string(sig.constGenericParams.size()) +
                          " template argument(s), got " + std::to_string(call.templateArgs.size()), line);
@@ -253,10 +242,6 @@ RixType TypeChecker::checkBinary(const BinaryExpr& bin, int line) {
             } catch (const UnifyError& e) {
                 throw TypeError("matrix multiply: inner dimensions don't match: " + std::string(e.what()), line);
             }
-            // Result tag left Untagged for now -- matmul's output tag isn't
-            // formalized yet (e.g. what a portfolio-weights-times-simulated-
-            // returns product should be called); revisit once real stdlib
-            // functions that produce one exist.
             return RixType::matrix(Tag{"Untagged"}, subst.resolveDim(lm.rows), subst.resolveDim(rm.cols));
         }
         throw TypeError("cannot apply '" + bin.op + "' to " + lhs.toString() + " and " + rhs.toString(), line);

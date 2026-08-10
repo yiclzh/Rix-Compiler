@@ -1,0 +1,2 @@
+/usr/bin/ar qc librixc_lib.a CMakeFiles/rixc_lib.dir/src/rix_tokenizer.cpp.o CMakeFiles/rixc_lib.dir/src/dim_expr.cpp.o CMakeFiles/rixc_lib.dir/src/rix_type.cpp.o CMakeFiles/rixc_lib.dir/src/ast.cpp.o CMakeFiles/rixc_lib.dir/src/parser.cpp.o CMakeFiles/rixc_lib.dir/src/unify.cpp.o CMakeFiles/rixc_lib.dir/src/symbol_table.cpp.o CMakeFiles/rixc_lib.dir/src/function_table.cpp.o CMakeFiles/rixc_lib.dir/src/type_checker.cpp.o CMakeFiles/rixc_lib.dir/src/cpp_writer.cpp.o
+/usr/bin/ranlib librixc_lib.a

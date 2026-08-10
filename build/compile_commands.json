@@ -1,0 +1,116 @@
+[
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/rix_tokenizer.cpp.o -c /Users/yiruclare/RixCompiler/src/rix_tokenizer.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/rix_tokenizer.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/rix_tokenizer.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/dim_expr.cpp.o -c /Users/yiruclare/RixCompiler/src/dim_expr.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/dim_expr.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/dim_expr.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/rix_type.cpp.o -c /Users/yiruclare/RixCompiler/src/rix_type.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/rix_type.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/rix_type.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/ast.cpp.o -c /Users/yiruclare/RixCompiler/src/ast.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/ast.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/ast.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/parser.cpp.o -c /Users/yiruclare/RixCompiler/src/parser.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/parser.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/parser.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/unify.cpp.o -c /Users/yiruclare/RixCompiler/src/unify.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/unify.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/unify.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/symbol_table.cpp.o -c /Users/yiruclare/RixCompiler/src/symbol_table.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/symbol_table.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/symbol_table.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/function_table.cpp.o -c /Users/yiruclare/RixCompiler/src/function_table.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/function_table.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/function_table.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/type_checker.cpp.o -c /Users/yiruclare/RixCompiler/src/type_checker.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/type_checker.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/type_checker.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc_lib.dir/src/cpp_writer.cpp.o -c /Users/yiruclare/RixCompiler/src/cpp_writer.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/cpp_writer.cpp",
+  "output": "CMakeFiles/rixc_lib.dir/src/cpp_writer.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/rixc.dir/src/main.cpp.o -c /Users/yiruclare/RixCompiler/src/main.cpp",
+  "file": "/Users/yiruclare/RixCompiler/src/main.cpp",
+  "output": "CMakeFiles/rixc.dir/src/main.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_dim_expr.dir/test/test_dim_expr.cpp.o -c /Users/yiruclare/RixCompiler/test/test_dim_expr.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_dim_expr.cpp",
+  "output": "CMakeFiles/test_dim_expr.dir/test/test_dim_expr.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_rix_type.dir/test/test_rix_type.cpp.o -c /Users/yiruclare/RixCompiler/test/test_rix_type.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_rix_type.cpp",
+  "output": "CMakeFiles/test_rix_type.dir/test/test_rix_type.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_ast.dir/test/test_ast.cpp.o -c /Users/yiruclare/RixCompiler/test/test_ast.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_ast.cpp",
+  "output": "CMakeFiles/test_ast.dir/test/test_ast.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_parser.dir/test/test_parser.cpp.o -c /Users/yiruclare/RixCompiler/test/test_parser.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_parser.cpp",
+  "output": "CMakeFiles/test_parser.dir/test/test_parser.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_unify.dir/test/test_unify.cpp.o -c /Users/yiruclare/RixCompiler/test/test_unify.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_unify.cpp",
+  "output": "CMakeFiles/test_unify.dir/test/test_unify.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_tables.dir/test/test_tables.cpp.o -c /Users/yiruclare/RixCompiler/test/test_tables.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_tables.cpp",
+  "output": "CMakeFiles/test_tables.dir/test/test_tables.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_type.dir/test/test_type.cpp.o -c /Users/yiruclare/RixCompiler/test/test_type.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_type.cpp",
+  "output": "CMakeFiles/test_type.dir/test/test_type.cpp.o"
+},
+{
+  "directory": "/Users/yiruclare/RixCompiler/build",
+  "command": "/usr/bin/c++  -I/Users/yiruclare/RixCompiler/include -isystem /opt/homebrew/include/eigen3 -std=c++2b -arch arm64 -o CMakeFiles/test_cpp_writer.dir/test/test_cpp_writer.cpp.o -c /Users/yiruclare/RixCompiler/test/test_cpp_writer.cpp",
+  "file": "/Users/yiruclare/RixCompiler/test/test_cpp_writer.cpp",
+  "output": "CMakeFiles/test_cpp_writer.dir/test/test_cpp_writer.cpp.o"
+}
+]
