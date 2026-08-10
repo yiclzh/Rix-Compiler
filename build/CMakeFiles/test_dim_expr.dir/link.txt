@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_dim_expr.dir/test/test_dim_expr.cpp.o -o test_dim_expr  librixc_lib.a

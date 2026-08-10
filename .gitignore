@@ -1,0 +1,11 @@
+build/
+cmake-build-*/
+.vscode/
+.idea/
+*.swp
+.DS_Store
+*.o
+*.obj
+*.exe
+*.out
+rix_plots/

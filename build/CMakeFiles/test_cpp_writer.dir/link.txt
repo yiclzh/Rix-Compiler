@@ -1,1 +1,0 @@
-/usr/bin/c++  -arch arm64 -Wl,-search_paths_first -Wl,-headerpad_max_install_names CMakeFiles/test_cpp_writer.dir/test/test_cpp_writer.cpp.o -o test_cpp_writer  librixc_lib.a
