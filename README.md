@@ -6,7 +6,7 @@ A statically-shape-checked matrix language for quantitative finance, compiling t
 
 What is Rix?
 
-Rix catches an entire class of bug that plain C++/numpy/Eigen can't: code that's structurally valid but semantically wrong. cov(prices) — computing a covariance matrix directly on price levels instead of returns — runs fine in most languages and produces a quietly wrong number. In Rix, Prices and Returns are distinct types, even when their numeric shape is identical, so that call is a compile error.
+Rix catches an entire class of bug that plain C++/numpy/Eigen can't: code that's structurally valid but semantically wrong. cov(prices) — computing a covariance matrix directly on price levels instead of returns — runs fine in most languages and produces a wrong number. In Rix, Prices and Returns are distinct types, even when their numeric shape is identical, so that call is a compile error.
 
 rix:
 let prices: Matrix<Prices, 252, 3> = load_csv("universe.csv")
